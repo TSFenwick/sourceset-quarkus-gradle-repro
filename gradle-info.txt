@@ -1,0 +1,393 @@
+Initialized native services in: /Users/tomfenwick/.gradle/native
+Initialized jansi services in: /Users/tomfenwick/.gradle/native
+Found daemon DaemonInfo{pid=20504, address=[8172e65a-836f-4279-b07f-73710a849ed1 port:53876, addresses:[/127.0.0.1]], state=Idle, lastBusy=1751573191705, context=DefaultDaemonContext[uid=3a616fb3-0dc2-4894-a388-618c9e507ddb,javaHome=/Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home,javaVersion=21,javaVendor=Azul Systems, Inc.,daemonRegistryDir=/Users/tomfenwick/.gradle/daemon,pid=20504,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=1g,-Xmx2g,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+At least one daemon option is different.
+Wanted: DaemonRequestContext{jvmCriteria=/Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home (no JDK specified, using current Java home), daemonOpts=[-XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=3a616fb3-0dc2-4894-a388-618c9e507ddb,javaHome=/Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home,javaVersion=21,javaVendor=Azul Systems, Inc.,daemonRegistryDir=/Users/tomfenwick/.gradle/daemon,pid=20504,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=1g,-Xmx2g,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 64255). The daemon log file: /Users/tomfenwick/.gradle/daemon/8.14.2/daemon-64255.out.log
+Starting 7th build in daemon [uptime: 13 mins 12.592 secs, performance: 99%, GC rate: 0.00/s, heap usage: 4% of 512 MiB, non-heap usage: 55% of 384 MiB]
+Using 14 worker leases.
+Now considering [/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/settings.gradle.kts'.
+Projects loaded. Root project using build file '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build.gradle.kts'.
+Included projects: [root project 'sourceset-quarkus-gradle-repro']
+
+> Configure project :
+Evaluating root project 'sourceset-quarkus-gradle-repro' using build file '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build.gradle.kts'.
+Resolved plugin [id: 'org.gradle.java']
+Resolved plugin [id: 'io.quarkus', version: '3.24.2']
+Resolved plugin [id: 'org.openapi.generator', version: '7.14.0']
+All projects evaluated.
+Task name matched 'quarkusRun'
+Selected primary task 'quarkusRun' from project :
+Tasks to be executed: [task ':openApiGenerate', task ':compileGeneratedApiJava', task ':processGeneratedApiResources', task ':generatedApiClasses', task ':processResources', task ':quarkusGenerateAppModel', task ':quarkusGenerateCode', task ':quarkusGenerateDevAppModel', task ':quarkusGenerateCodeDev', task ':compileJava', task ':classes', task ':jar', task ':quarkusBuildAppModel', task ':quarkusAppPartsBuild', task ':quarkusDependenciesBuild', task ':quarkusBuild', task ':quarkusRun']
+Tasks that were excluded: []
+Resolve mutations for :openApiGenerate (Thread[#608,Execution worker,5,main]) started.
+:openApiGenerate (Thread[#608,Execution worker,5,main]) started.
+
+> Task :openApiGenerate
+Caching disabled for task ':openApiGenerate' because:
+  Build cache is disabled
+Task ':openApiGenerate' is not up-to-date because:
+  Output property 'outputDir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src has been removed.
+  Output property 'outputDir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/.openapi-generator has been removed.
+  Output property 'outputDir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/.openapi-generator/FILES has been removed.
+  and more...
+Generating with dryRun=false
+No .openapi-generator-ignore file found.
+OpenAPI Generator: jaxrs-spec (server)
+Generator 'jaxrs-spec' is considered stable.
+Environment variable JAVA_POST_PROCESS_FILE not defined so the Java code may not be properly formatted. To define it, try 'export JAVA_POST_PROCESS_FILE="/usr/local/bin/clang-format -i"' (Linux/Mac)
+NOTE: To enable file post-processing, 'enablePostProcessFile' must be set to `true` (--enable-post-process-file for CLI).
+Invoker Package Name, originally not set, is now derived from api package name: my.groupId.gen
+Processing operation listPets
+Processing operation createPets
+Processing operation showPetById
+Model Pets not generated since it's an alias to array (without property) and `generateAliasAsModel` is set to false (default)
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/src/gen/java/my/groupId/gen/dtos/Error.java
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/src/gen/java/my/groupId/gen/dtos/Pet.java
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/src/gen/java/my/groupId/gen/api/PetsApi.java
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/README.md
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/src/gen/java/my/groupId/gen/RestResourceRoot.java
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/pom.xml
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/src/gen/java/my/groupId/gen/RestApplication.java
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/src/main/openapi/openapi.yaml
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/.openapi-generator-ignore
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/.openapi-generator/VERSION
+writing file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src/.openapi-generator/FILES
+############################################################################################
+# Thanks for using OpenAPI Generator.                                                      #
+# We appreciate your support! Please consider donation to help us maintain this project.   #
+# https://opencollective.com/openapi_generator/donate                                      #
+############################################################################################
+Successfully generated code to /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/generated-src
+Resolve mutations for :compileGeneratedApiJava (Thread[#608,Execution worker,5,main]) started.
+:compileGeneratedApiJava (Thread[#608,Execution worker,5,main]) started.
+
+> Task :compileGeneratedApiJava
+Caching disabled for task ':compileGeneratedApiJava' because:
+  Build cache is disabled
+Task ':compileGeneratedApiJava' is not up-to-date because:
+  Output property 'destinationDirectory' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/generatedApi has been removed.
+  Output property 'destinationDirectory' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/generatedApi/my has been removed.
+  Output property 'destinationDirectory' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/generatedApi/my/groupId has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':compileGeneratedApiJava'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain '/Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home'.
+file or directory '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/src/generatedApi/java', not found
+Compiling with JDK Java compiler API.
+Class dependency analysis for incremental compilation took 0.0 secs.
+Created classpath snapshot for incremental compilation in 0.004 secs.
+Resolve mutations for :processGeneratedApiResources (Thread[#608,Execution worker,5,main]) started.
+:processGeneratedApiResources (Thread[#608,Execution worker,5,main]) started.
+
+> Task :processGeneratedApiResources NO-SOURCE
+Skipping task ':processGeneratedApiResources' as it has no source files and no previous output files.
+Resolve mutations for :generatedApiClasses (Thread[#608,Execution worker,5,main]) started.
+:generatedApiClasses (Thread[#608,Execution worker,5,main]) started.
+
+> Task :generatedApiClasses
+Skipping task ':generatedApiClasses' as it has no actions.
+Resolve mutations for :processResources (Thread[#621,Execution worker Thread 13,5,main]) started.
+:processResources (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :processResources
+Caching disabled for task ':processResources' because:
+  Build cache is disabled
+  Not worth caching
+Task ':processResources' is not up-to-date because:
+  Output property 'destinationDir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/resources/main has been removed.
+  Output property 'destinationDir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/resources/main/application.properties has been removed.
+  Output property 'destinationDir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/resources/main/openapi has been removed.
+  and more...
+Resolve mutations for :quarkusGenerateAppModel (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusGenerateAppModel (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :quarkusGenerateAppModel
+Caching disabled for task ':quarkusGenerateAppModel' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Task ':quarkusGenerateAppModel' is not up-to-date because:
+  Output property 'applicationModel' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus/application-model/quarkus-app-model.dat has been removed.
+Resolve mutations for :quarkusGenerateCode (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusGenerateCode (Thread[#621,Execution worker Thread 13,5,main]) started.
+This JVM does not support getting OS memory, so no OS memory status updates will be broadcast
+
+> Task :quarkusGenerateCode
+Caching disabled for task ':quarkusGenerateCode' because:
+  Build cache is disabled
+Task ':quarkusGenerateCode' is not up-to-date because:
+  Output property 'generatedOutputDirectory' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/quarkus-generated-sources has been removed.
+Starting process 'Gradle Worker Daemon 3'. Working directory: /Users/tomfenwick/.gradle/workers Command: /Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home/bin/java -Dplatform.quarkus.native.builder-image=mandrel -Dquarkus.application.name=sourceset-quarkus-gradle-repro -Dquarkus.application.version=1.0.0-SNAPSHOT -Dquarkus.native.add-all-charsets=false -Dquarkus.native.agent-configuration-apply=false -Dquarkus.native.auto-service-loader-registration=false -Dquarkus.native.builder-image=${platform.quarkus.native.builder-image} -Dquarkus.native.builder-image.pull=always -Dquarkus.native.cleanup-server=false -Dquarkus.native.debug-build-process=false -Dquarkus.native.debug.enabled=false -Dquarkus.native.dump-proxies=false -Dquarkus.native.enable-all-security-services=false -Dquarkus.native.enable-dashboard-dump=false -Dquarkus.native.enable-fallback-images=false -Dquarkus.native.enable-http-url-handler=true -Dquarkus.native.enable-https-url-handler=false -Dquarkus.native.enable-isolates=true -Dquarkus.native.enable-jni=true -Dquarkus.native.enable-reports=false -Dquarkus.native.enable-server=false -Dquarkus.native.enable-vm-inspection=false -Dquarkus.native.enabled=false -Dquarkus.native.file-encoding=UTF-8 -Dquarkus.native.full-stack-traces=true -Dquarkus.native.graalvm-home=${GRAALVM_HOME:} -Dquarkus.native.headless=true -Dquarkus.native.include-reasons-in-config-files=false -Dquarkus.native.inline-before-analysis=true -Dquarkus.native.java-home=${java.home} -Dquarkus.native.publish-debug-build-process-port=true -Dquarkus.native.remote-container-build=false -Dquarkus.native.report-errors-at-runtime=false -Dquarkus.native.report-exception-stack-traces=true -Dquarkus.native.reuse-existing=false -Dquarkus.native.sources-only=false -Dquarkus.package.jar.add-runner-suffix=true -Dquarkus.package.jar.appcds.enabled=false -Dquarkus.package.jar.appcds.use-aot=false -Dquarkus.package.jar.appcds.use-container=true -Dquarkus.package.jar.compress=true -Dquarkus.package.jar.decompiler.enabled=false -Dquarkus.package.jar.decompiler.jar-directory=${user.home}/.quarkus -Dquarkus.package.jar.decompiler.output-directory=decompiler -Dquarkus.package.jar.enabled=true -Dquarkus.package.jar.filter-optional-dependencies=false -Dquarkus.package.jar.include-dependency-list=true -Dquarkus.package.jar.manifest.add-implementation-entries=true -Dquarkus.package.jar.type=fast-jar -Dquarkus.package.runner-suffix=-runner -Dquarkus.package.write-transformed-bytecode-to-build-output=false -Dquarkus.profile=prod -Duser.dir=/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro @/Users/tomfenwick/.gradle/.tmp/gradle-worker-classpath5093388565881506941txt -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Worker Daemon 3'
+Successfully started process 'Gradle Worker Daemon 3'
+Started Gradle worker daemon (0.146 secs) with fork options DaemonForkOptions{executable=/Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home/bin/java, minHeapSize=null, maxHeapSize=null, jvmArgs=[], keepAliveMode=SESSION}.
+Generating Quarkus code for my-groupId:sourceset-quarkus-gradle-repro:1.0.0-SNAPSHOT
+  launch mode:                  NORMAL
+  base name:                    sourceset-quarkus-gradle-repro-1.0.0-SNAPSHOT
+  generated source directory:   /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/quarkus-generated-sources
+  build directory:              /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build
+Resolve mutations for :quarkusGenerateDevAppModel (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusGenerateDevAppModel (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :quarkusGenerateDevAppModel
+Caching disabled for task ':quarkusGenerateDevAppModel' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Task ':quarkusGenerateDevAppModel' is not up-to-date because:
+  Value of input property 'projectDescriptor' has changed for task ':quarkusGenerateDevAppModel'
+Resolve mutations for :quarkusGenerateCodeDev (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusGenerateCodeDev (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :quarkusGenerateCodeDev
+Caching disabled for task ':quarkusGenerateCodeDev' because:
+  Build cache is disabled
+Task ':quarkusGenerateCodeDev' is not up-to-date because:
+  Input property 'applicationModel' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus/application-model/quarkus-app-dev-model.dat has changed.
+Generating Quarkus code for my-groupId:sourceset-quarkus-gradle-repro:1.0.0-SNAPSHOT
+  launch mode:                  DEVELOPMENT
+  base name:                    sourceset-quarkus-gradle-repro-1.0.0-SNAPSHOT
+  generated source directory:   /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/quarkus-generated-sources
+  build directory:              /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build
+Resolve mutations for :compileJava (Thread[#621,Execution worker Thread 13,5,main]) started.
+:compileJava (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :compileJava
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Task ':compileJava' is not up-to-date because:
+  Output property 'destinationDirectory' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/main has been removed.
+  Output property 'destinationDirectory' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/main/my has been removed.
+  Output property 'destinationDirectory' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/main/my/groupId has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':compileJava'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain '/Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home'.
+file or directory '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/quarkus-generated-sources/grpc', not found
+file or directory '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/quarkus-generated-sources/avdl', not found
+file or directory '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/quarkus-generated-sources/avpr', not found
+file or directory '/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/classes/java/quarkus-generated-sources/avsc', not found
+Compiling with JDK Java compiler API.
+Class dependency analysis for incremental compilation took 0.0 secs.
+Created classpath snapshot for incremental compilation in 0.002 secs.
+Resolve mutations for :classes (Thread[#621,Execution worker Thread 13,5,main]) started.
+:classes (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :classes
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :jar (Thread[#621,Execution worker Thread 13,5,main]) started.
+:jar (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :jar
+Caching disabled for task ':jar' because:
+  Build cache is disabled
+  Not worth caching
+Task ':jar' is not up-to-date because:
+  Output property 'archiveFile' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/libs/sourceset-quarkus-gradle-repro-1.0.0-SNAPSHOT.jar has been removed.
+Resolve mutations for :quarkusBuildAppModel (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusBuildAppModel (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :quarkusBuildAppModel
+Caching disabled for task ':quarkusBuildAppModel' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Task ':quarkusBuildAppModel' is not up-to-date because:
+  Value of input property 'projectDescriptor' has changed for task ':quarkusBuildAppModel'
+Resolve mutations for :quarkusAppPartsBuild (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusAppPartsBuild (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :quarkusAppPartsBuild
+Caching disabled for task ':quarkusAppPartsBuild' because:
+  Build cache is disabled
+Task ':quarkusAppPartsBuild' is not up-to-date because:
+  Output property 'outputDirectories.app-build-dir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/app has been removed.
+  Output property 'outputDirectories.app-build-dir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/app/quarkus-app has been removed.
+  Output property 'outputDirectories.app-build-dir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/app/quarkus-app/app has been removed.
+  and more...
+Building Quarkus app for JAR type fast-jar in /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/gen
+Starting Quarkus application build for JAR type fast-jar
+Effective properties: 
+    platform.quarkus.native.builder-image=mandrel
+    quarkus.application.name=sourceset-quarkus-gradle-repro
+    quarkus.application.version=1.0.0-SNAPSHOT
+    quarkus.native.add-all-charsets=false
+    quarkus.native.agent-configuration-apply=false
+    quarkus.native.auto-service-loader-registration=false
+    quarkus.native.builder-image.pull=always
+    quarkus.native.builder-image=${platform.quarkus.native.builder-image}
+    quarkus.native.cleanup-server=false
+    quarkus.native.debug-build-process=false
+    quarkus.native.debug.enabled=false
+    quarkus.native.dump-proxies=false
+    quarkus.native.enable-all-security-services=false
+    quarkus.native.enable-dashboard-dump=false
+    quarkus.native.enable-fallback-images=false
+    quarkus.native.enable-http-url-handler=true
+    quarkus.native.enable-https-url-handler=false
+    quarkus.native.enable-isolates=true
+    quarkus.native.enable-jni=true
+    quarkus.native.enable-reports=false
+    quarkus.native.enable-server=false
+    quarkus.native.enable-vm-inspection=false
+    quarkus.native.enabled=false
+    quarkus.native.file-encoding=UTF-8
+    quarkus.native.full-stack-traces=true
+    quarkus.native.graalvm-home=${GRAALVM_HOME:}
+    quarkus.native.headless=true
+    quarkus.native.include-reasons-in-config-files=false
+    quarkus.native.inline-before-analysis=true
+    quarkus.native.java-home=${java.home}
+    quarkus.native.publish-debug-build-process-port=true
+    quarkus.native.remote-container-build=false
+    quarkus.native.report-errors-at-runtime=false
+    quarkus.native.report-exception-stack-traces=true
+    quarkus.native.reuse-existing=false
+    quarkus.native.sources-only=false
+    quarkus.package.jar.add-runner-suffix=true
+    quarkus.package.jar.appcds.enabled=false
+    quarkus.package.jar.appcds.use-aot=false
+    quarkus.package.jar.appcds.use-container=true
+    quarkus.package.jar.compress=true
+    quarkus.package.jar.decompiler.enabled=false
+    quarkus.package.jar.decompiler.jar-directory=${user.home}/.quarkus
+    quarkus.package.jar.decompiler.output-directory=decompiler
+    quarkus.package.jar.enabled=true
+    quarkus.package.jar.filter-optional-dependencies=false
+    quarkus.package.jar.include-dependency-list=true
+    quarkus.package.jar.manifest.add-implementation-entries=true
+    quarkus.package.jar.type=fast-jar
+    quarkus.package.runner-suffix=-runner
+    quarkus.package.write-transformed-bytecode-to-build-output=false
+    quarkus.profile=prod
+Building Quarkus application my-groupId:sourceset-quarkus-gradle-repro:1.0.0-SNAPSHOT
+  base name:                   sourceset-quarkus-gradle-repro-1.0.0-SNAPSHOT
+  target directory:            /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build
+  configured JAR type:         null
+  configured output directory: null
+  configured output name:      null
+  Gradle version:              8.14.2
+JBoss Threads version 3.9.1
+Quarkus augmentation completed in 666ms
+AugmentResult.nativeResult = null
+AugmentResult.results = 
+    /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/quarkus-run.jar
+AugmentResult:
+    .jar.path = /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/quarkus-run.jar
+    .jar.libraryDir = /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/lib
+    .jar.originalArtifact = null
+    .jar.uberJar = false
+Quarkus application build was successful
+Synchronizing Quarkus fast-jar-like app for JAR type fast-jar into /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/app
+Resolve mutations for :quarkusDependenciesBuild (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusDependenciesBuild (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :quarkusDependenciesBuild
+Caching disabled for task ':quarkusDependenciesBuild' because:
+  Build cache is disabled
+  Caching has not been enabled for the task
+Task ':quarkusDependenciesBuild' is not up-to-date because:
+  Output property 'outputDirectories.dependencies-dir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/dep has been removed.
+  Output property 'outputDirectories.dependencies-dir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/dep/lib has been removed.
+  Output property 'outputDirectories.dependencies-dir' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/dep/lib/boot has been removed.
+  and more...
+Placing Quarkus application dependencies for JAR type fast-jar in /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/dep
+Removed artifacts: (none)
+parent first artifacts: (none)
+Copied 107 files into /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/dep/lib/main
+Copied 15 files into /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/dep/lib/boot
+Resolve mutations for :quarkusBuild (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusBuild (Thread[#621,Execution worker Thread 13,5,main]) started.
+
+> Task :quarkusBuild
+Caching disabled for task ':quarkusBuild' because:
+  Build cache is disabled
+  Gradle does not know how file 'build/quarkus-app/quarkus-run.jar' was created (output property 'buildOutputDirectories.fast-jar'). Task output caching requires exclusive access to output paths to guarantee correctness (i.e. multiple tasks are not allowed to produce output in the same location).
+Task ':quarkusBuild' is not up-to-date because:
+  Output property 'buildOutputDirectories.fast-jar' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/app/sourceset-quarkus-gradle-repro-1.0.0-SNAPSHOT.jar has changed.
+  Output property 'buildOutputDirectories.fast-jar' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/lib/main/86495d84d99483297caec829b5c55a19e46cea95.generatedApi has been removed.
+  Output property 'buildOutputDirectories.fast-jar' file /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/quarkus-app-dependencies.txt has changed.
+  and more...
+Removing output files and directories (provide a clean state).
+Synchronizing Quarkus build for fast-jar JAR type from /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/app/quarkus-app and /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/dep into /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app
+Copying remaining Quarkus application artifacts for fast-jar JAR type from /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-build/app into /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build
+Resolve mutations for :quarkusRun (Thread[#621,Execution worker Thread 13,5,main]) started.
+:quarkusRun (Thread[#621,Execution worker Thread 13,5,main]) started.
+14:56:22,461 ERROR [io.qua.run.Quarkus] Error running Quarkus: java.lang.ExceptionInInitializerError
+	at java.base/jdk.internal.misc.Unsafe.allocateInstance(Native Method)
+	at java.base/java.lang.invoke.DirectMethodHandle.allocateInstance(DirectMethodHandle.java:501)
+	at io.quarkus.runtime.Quarkus.run(Quarkus.java:79)
+	at io.quarkus.runtime.Quarkus.run(Quarkus.java:51)
+	at io.quarkus.runtime.Quarkus.run(Quarkus.java:144)
+	at io.quarkus.runner.GeneratedMain.main(Unknown Source)
+	at io.quarkus.bootstrap.runner.QuarkusEntryPoint.doRun(QuarkusEntryPoint.java:69)
+	at io.quarkus.bootstrap.runner.QuarkusEntryPoint.main(QuarkusEntryPoint.java:37)
+Caused by: java.lang.RuntimeException: Failed to start quarkus
+	at io.quarkus.runner.ApplicationImpl.<clinit>(Unknown Source)
+	... 8 more
+Caused by: java.lang.RuntimeException: java.nio.file.NoSuchFileException: /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/lib/main/86495d84d99483297caec829b5c55a19e46cea95.generatedApi-1751579780083.jar
+	at io.quarkus.bootstrap.runner.JarFileReference.asyncLoadAcquiredJarFile(JarFileReference.java:209)
+	at io.quarkus.bootstrap.runner.JarFileReference.withJarFile(JarFileReference.java:147)
+	at io.quarkus.bootstrap.runner.JarResource.getResourceData(JarResource.java:56)
+	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:106)
+	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+	at io.quarkus.bootstrap.runner.RunnerClassLoader.defineClass(RunnerClassLoader.java:152)
+	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:111)
+	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at my.groupId.PetsResource_Bean.<init>(Unknown Source)
+	at io.quarkus.arc.setup.Default_ComponentsProvider.addBeans1(Unknown Source)
+	at io.quarkus.arc.setup.Default_ComponentsProvider.getComponents(Unknown Source)
+	at io.quarkus.arc.impl.ArcContainerImpl.<init>(ArcContainerImpl.java:129)
+	at io.quarkus.arc.Arc.initialize(Arc.java:38)
+	at io.quarkus.arc.runtime.ArcRecorder.initContainer(ArcRecorder.java:52)
+	at io.quarkus.runner.recorded.ArcProcessor$initializeContainer1770303700.deploy_0(Unknown Source)
+	at io.quarkus.runner.recorded.ArcProcessor$initializeContainer1770303700.deploy(Unknown Source)
+	... 9 more
+Caused by: java.nio.file.NoSuchFileException: /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/lib/main/86495d84d99483297caec829b5c55a19e46cea95.generatedApi-1751579780083.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:171)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1854)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1445)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:724)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:345)
+	at io.smallrye.common.io.jar.JarFiles.create(JarFiles.java:49)
+	at io.quarkus.bootstrap.runner.JarFileReference.asyncLoadAcquiredJarFile(JarFileReference.java:207)
+	... 29 more
+
+
+> Task :quarkusRun
+Caching disabled for task ':quarkusRun' because:
+  Build cache is disabled
+Task ':quarkusRun' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+JBoss Threads version 3.9.1
+Executing "/Users/tomfenwick/.sdkman/candidates/java/21.0.7-zulu/zulu-21.jdk/Contents/Home/bin/java -Dquarkus.package.jar.manifest.add-implementation-entries=true -Dquarkus.package.jar.enabled=true -Dquarkus.package.jar.decompiler.jar-directory=${user.home}/.quarkus -Dquarkus.native.enable-vm-inspection=false -Dquarkus.package.jar.type=fast-jar -Dquarkus.native.builder-image.pull=always -Dquarkus.package.runner-suffix=-runner -Dquarkus.native.report-exception-stack-traces=true -Dquarkus.package.jar.appcds.enabled=false -Dquarkus.native.add-all-charsets=false -Dquarkus.native.enable-isolates=true -Dquarkus.application.name=sourceset-quarkus-gradle-repro -Dquarkus.native.enable-http-url-handler=true -Dquarkus.package.jar.decompiler.enabled=false -Dquarkus.native.reuse-existing=false -Dquarkus.native.headless=true -Dquarkus.native.enable-fallback-images=false -Dquarkus.package.jar.include-dependency-list=true -Dquarkus.native.java-home=${java.home} -Dquarkus.profile=prod -Dquarkus.native.agent-configuration-apply=false -Dquarkus.native.publish-debug-build-process-port=true -Dquarkus.package.jar.filter-optional-dependencies=false -Dquarkus.application.version=1.0.0-SNAPSHOT -Dquarkus.native.builder-image=${platform.quarkus.native.builder-image} -Dquarkus.native.full-stack-traces=true -Dquarkus.native.enabled=false -Dquarkus.native.inline-before-analysis=true -Dquarkus.native.debug-build-process=false -Dquarkus.native.dump-proxies=false -Dquarkus.native.enable-server=false -Dquarkus.native.auto-service-loader-registration=false -Dquarkus.package.jar.add-runner-suffix=true -Dquarkus.native.enable-https-url-handler=false -Dquarkus.package.jar.decompiler.output-directory=decompiler -Dquarkus.package.jar.compress=true -Dquarkus.package.jar.appcds.use-aot=false -Dquarkus.native.enable-all-security-services=false -Dquarkus.native.report-errors-at-runtime=false -Dquarkus.native.enable-reports=false -Dquarkus.package.write-transformed-bytecode-to-build-output=false -Dquarkus.native.remote-container-build=false -Dquarkus.native.cleanup-server=false -Dquarkus.native.include-reasons-in-config-files=false -Dquarkus.native.graalvm-home=${GRAALVM_HOME:} -Dquarkus.native.file-encoding=UTF-8 -Dquarkus.native.debug.enabled=false -Dquarkus.package.jar.appcds.use-container=true -Dquarkus.native.sources-only=false -Dquarkus.native.enable-dashboard-dump=false -Dquarkus.native.enable-jni=true -jar /Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/quarkus-app/quarkus-run.jar"
+
+[Incubating] Problems report is available at: file:///Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3s
+14 actionable tasks: 14 executed
+Watched directory hierarchies: [/Users/tomfenwick/Dev/github.com/tsfenwick/sourceset-quarkus-gradle-repro]
+Stopped 1 worker daemon(s).
