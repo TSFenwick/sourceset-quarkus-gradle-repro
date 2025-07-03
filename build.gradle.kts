@@ -91,8 +91,8 @@ openApiGenerate {
     generatorName = "jaxrs-spec"
     inputSpec = "${projectDir}/src/main/resources/openapi/openapi.yaml"
     outputDir = codegenDir.toString()
-    apiPackage = "my.groupId.${name}.gen.api"
-    modelPackage = "my.groupId.${name}.gen.dtos"
+    apiPackage = "my.groupId.gen.api"
+    modelPackage = "my.groupId.gen.dtos"
     templateDir = "${rootDir}/openapi-templates/jaxrs-spec"
 
     configOptions = mapOf(
