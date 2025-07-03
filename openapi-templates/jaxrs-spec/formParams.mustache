@@ -1,0 +1,3 @@
+{{! BEGIN CUSTOMIZATION - support for quarkus multipart/form-data }}
+{{#isFormParam}}{{^isFile}}@RestForm(value = "{{baseName}}") @PartType(MediaType.APPLICATION_JSON) {{{dataType}}} {{paramName}}{{/isFile}}{{#isFile}} @FormParam(value = "{{baseName}}") FileUpload {{paramName}}{{/isFile}}{{/isFormParam}}
+{{! END CUSTOMIZATION }}
